@@ -1,34 +1,35 @@
 import type { Metadata, Viewport } from "next";
-import { GeistMono } from "geist/font/mono";
-import { GeistSans } from "geist/font/sans";
+import { Rubik } from "next/font/google";
 
-import { cn } from "@acme/ui";
-import { ThemeProvider, ThemeToggle } from "@acme/ui/theme";
-import { Toaster } from "@acme/ui/toast";
+import { cn } from "@sudoswap/ui";
+import { ThemeProvider, ThemeToggle } from "@sudoswap/ui/theme";
+import { Toaster } from "@sudoswap/ui/toast";
 
 import { env } from "~/env";
 import { TRPCReactProvider } from "~/trpc/react";
 
 import "~/app/globals.css";
 
+const rubik = Rubik({ subsets: ["latin"], variable: "--font-rubik" });
+
 export const metadata: Metadata = {
   metadataBase: new URL(
     env.VERCEL_ENV === "production"
-      ? "https://turbo.t3.gg"
+      ? "https://react-components.sudoswap.xyz"
       : "http://localhost:3000",
   ),
-  title: "Create T3 Turbo",
-  description: "Simple monorepo with shared backend for web & mobile apps",
+  title: "Sudoswap React Components",
+  description: "The fastest way to integrate sudoswap into your app",
   openGraph: {
-    title: "Create T3 Turbo",
+    title: "Sudoswap React Components",
     description: "Simple monorepo with shared backend for web & mobile apps",
     url: "https://create-t3-turbo.vercel.app",
-    siteName: "Create T3 Turbo",
+    siteName: "Sudoswap React Components",
   },
   twitter: {
     card: "summary_large_image",
-    site: "@jullerino",
-    creator: "@jullerino",
+    site: "@sudoswap",
+    creator: "@sudoswap",
   },
 };
 
@@ -45,8 +46,7 @@ export default function RootLayout(props: { children: React.ReactNode }) {
       <body
         className={cn(
           "min-h-screen bg-background font-sans text-foreground antialiased",
-          GeistSans.variable,
-          GeistMono.variable,
+          rubik.variable,
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>

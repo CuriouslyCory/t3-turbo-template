@@ -1,0 +1,38 @@
+{
+  "name": "@sudoswap/react-hooks",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "build": "tsup",
+    "clean": "rm -rf node_modules .turbo dist .eslintcache",
+    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "lint": "eslint src/",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@sudoswap/eslint-config": "workspace:^0.2.0",
+    "@sudoswap/prettier-config": "workspace:^0.1.0",
+    "@sudoswap/tailwind-config": "workspace:^0.1.0",
+    "@sudoswap/tsconfig": "workspace:^0.1.0",
+    "@turbo/gen": "^1.10.12",
+    "@types/react": "^18.2.0",
+    "prettier": "^3.1.1",
+    "typescript": "^5.3.3",
+    "tsup": "^7.3.0"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "zod": "^3.22.4"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@sudoswap/eslint-config/base",
+      "@sudoswap/eslint-config/react"
+    ]
+  },
+  "prettier": "@sudoswap/prettier-config"
+}

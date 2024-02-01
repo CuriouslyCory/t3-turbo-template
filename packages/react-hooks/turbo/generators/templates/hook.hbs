@@ -1,0 +1,10 @@
+import * as React from "react";
+
+interface Props {
+  children?: React.ReactNode;
+}
+
+export const use{{ pascalCase name }} = ({ children }: Props) => {
+  const [{{camelCase name}}, set{{camelCase name}}] = React.useState<string>("Hello {{pascalCase name}}");
+  return { {{camelCase name}}, set{{camelCase name}} };
+};

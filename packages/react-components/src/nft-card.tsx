@@ -1,8 +1,8 @@
 import * as React from "react";
 
 import type { NFT } from "@sudoswap/react-hooks";
-import { cn } from "@sudoswap/ui";
 
+import { cn } from ".";
 import {
   Card,
   CardContent,
@@ -75,7 +75,7 @@ const NftCardBasic = React.forwardRef<
     <NftCard
       ref={ref}
       className={cn(
-        "hover:bg-sudo-dark-shade-8 hover:outline-sudo-dark-shade-16 w-44 rounded-xl border border-white border-opacity-20 bg-red-500 p-3 hover:outline hover:outline-2",
+        "hover:bg-sudo-dark-shade-8  bg-sudo-dark-shade-4 w-44 rounded-xl border border-white border-opacity-20 p-3",
         className,
       )}
       {...props}

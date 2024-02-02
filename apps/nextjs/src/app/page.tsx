@@ -1,3 +1,4 @@
+// example imports
 import { NftCardExample } from "./examples/nft-card-example";
 
 export const runtime = "edge";

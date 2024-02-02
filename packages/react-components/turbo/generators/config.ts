@@ -22,7 +22,7 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
       },
       {
         type: "append",
-        path: "index.tsx",
+        path: "index.ts",
         pattern: /(?<insertion>\/\/ component exports)/g,
         template: 'export * from "./src/{{kabobCase name}}";',
       },

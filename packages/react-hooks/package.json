@@ -18,7 +18,7 @@
     "@sudoswap/prettier-config": "workspace:^0.1.0",
     "@sudoswap/tailwind-config": "workspace:^0.1.0",
     "@sudoswap/tsconfig": "workspace:^0.1.0",
-    "@turbo/gen": "^1.10.12",
+    "@turbo/gen": "^1.12.2",
     "@types/react": "^18.2.0",
     "prettier": "^3.1.1",
     "typescript": "^5.3.3",
